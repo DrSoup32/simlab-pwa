@@ -1,0 +1,154 @@
+{
+  "id": "Thyroid Storm",
+  "title": "The Heat Is On",
+  "summary": "",
+  "history": {
+    "hpi": "A 38-year-old female is brought to the ED by a friend.  Over the last few days, maybe a week, she seems to be more confused and very agitated.  Concerned, her friend visited and found her nearly naked, confused and mumbling largely incoherently.  She was very hot to the touch and it looked like her eyes were going to “pop out.”  Scared, she brought her to the ED for evaluation.\nHer friend knows very little about her medical history but thinks she takes thyroid medication.\nShe did have a dental procedure 3 or 4 days ago but it seemed to go OK.\n",
+    "pmh": [],
+    "meds": [],
+    "allergies": []
+  },
+  "vitals": [
+    {
+      "t": 1756829725701,
+      "hr": 145,
+      "bp": "160/80",
+      "rr": 28,
+      "spo2": 95,
+      "temp": 40.5
+    }
+  ],
+  "assets": [
+    {
+      "id": "video-1757460964186-zslbna",
+      "title": "Hyperdynamic LV.mp4",
+      "type": "video",
+      "contentUrl": "/uploads/1757460964152_Hyperdynamic_LV.mp4"
+    },
+    {
+      "id": "image-1757458184918-pcr5er",
+      "title": "Hypokalemia.PNG",
+      "type": "image",
+      "contentUrl": "/uploads/1757458184904_Hypokalemia.PNG"
+    },
+    {
+      "id": "image-1756833071218-r81qtc",
+      "title": "CXR - Admit",
+      "type": "image",
+      "contentUrl": ""
+    },
+    {
+      "id": "image-1756832604054-y60hy7",
+      "title": "EKG - Admit",
+      "type": "image",
+      "contentUrl": "server\\uploads\\1756156818637_A_Fib_c_Aberancy.png"
+    },
+    {
+      "id": "note-1756832409367-g2i47m",
+      "title": "Thyroid Panel",
+      "type": "note",
+      "content": "TSH\t<0.01\t(0.45 - 4.5 mU/L)\nFree T4\t     80\t(9 - 23 pmol/L)\nFree T3\t     26\t(3 - 7 pmol/L)\n"
+    },
+    {
+      "id": "note-1756831179416-ilm1kn",
+      "title": "CMP",
+      "type": "lab",
+      "content": "Test\t                Result\t  Normal Range\nSodium (Na)\t  142\t(135-145 mEq/L)\nPotassium (K)\t   5.3\t(3.7-5.2 mEq/L)\nChloride (Cl)\t    97\t(96-106 mEq/L)\nBicarb (CO2)\t    20\t(23-29 mEq/L)\nBUN\t            16\t(6-20 mg/dL)\nCreatinine (Cr)   1.2\t(0.6-1.3 mg/dL)\nGlucose\t          150\t(70-100 mg/dL)\nSerum calcium   9.6\t(8.5-10.2 mg/dL\nAlbumin\t              4\t(3.4-5.4 g/dL)\nALP\t            80\t(20-130 U/L)\nALT                     40\t(4-36 U/L)\nAST\t            32\t(8-33 U/L)\nT Bili\t           0.6\t(0.1-1.2 mg/dL)\nT Protein\t              7\t(6.0-8.3 g/dL)\n"
+    },
+    {
+      "id": "note-1756829765758-1hm4vi",
+      "title": "CBC",
+      "type": "lab",
+      "content": "WBC  --  11.6\nHgb  -- 16.5\nHCT --  55.2\nPLT  --  400,000"
+    }
+  ],
+  "ordersCatalog": [
+    {
+      "code": "CBC",
+      "name": "Initial CBC",
+      "kind": "lab"
+    },
+    {
+      "code": "THYROID PANEL",
+      "name": "Thyroid Panel",
+      "kind": "lab"
+    },
+    {
+      "code": "EKG - ADMIT",
+      "name": "Initial EKG",
+      "kind": "other"
+    },
+    {
+      "code": "CXR - ADMIT",
+      "name": "CXR - Admit",
+      "kind": "imaging"
+    },
+    {
+      "code": "CMP",
+      "name": "CMP",
+      "kind": "lab"
+    }
+  ],
+  "gates": [
+    {
+      "id": "g_CBC_1756833407565",
+      "label": "CBC result after 1m",
+      "orderCode": "CBC",
+      "when": {
+        "type": "time",
+        "msFromStart": 60000
+      },
+      "reveals": [
+        "note-1756829765758-1hm4vi"
+      ]
+    },
+    {
+      "id": "g_EKG - ADMIT_1756833631181",
+      "label": "EKG - ADMIT result after 1m",
+      "orderCode": "EKG - ADMIT",
+      "when": {
+        "type": "time",
+        "msFromStart": 60000
+      },
+      "reveals": [
+        "image-1756832604054-y60hy7"
+      ]
+    },
+    {
+      "id": "g_THYROID PANEL_1756833655810",
+      "label": "THYROID PANEL result after 1.5m",
+      "orderCode": "THYROID PANEL",
+      "when": {
+        "type": "time",
+        "msFromStart": 90000
+      },
+      "reveals": [
+        "note-1756832409367-g2i47m"
+      ]
+    },
+    {
+      "id": "g_CMP_1756833679644",
+      "label": "CMP result after 2m",
+      "orderCode": "CMP",
+      "when": {
+        "type": "time",
+        "msFromStart": 120000
+      },
+      "reveals": [
+        "note-1756831179416-ilm1kn"
+      ]
+    },
+    {
+      "id": "g_CXR - ADMIT_1756833704177",
+      "label": "CXR - ADMIT result after 1.5m",
+      "orderCode": "CXR - ADMIT",
+      "when": {
+        "type": "time",
+        "msFromStart": 90000
+      },
+      "reveals": [
+        "image-1756833071218-r81qtc"
+      ]
+    }
+  ]
+}

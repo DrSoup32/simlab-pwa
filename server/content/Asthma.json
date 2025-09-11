@@ -1,0 +1,22 @@
+{
+  "id": "Asthma",
+  "title": "I Can't Breathe",
+  "summary": "Patient runs out of her inhalers.  Worsening SOB for 2 weeks.  Must use Nebs, supplemental O2, solu-medrol and monitor airway.  Observe for distress.  If not done timely, patient will require increasing O2 and need mechanical airway.",
+  "history": {
+    "hpi": "32 YO female with H/O uncontrolled asthma has been out of her inhalers for the past 2 months.  Works in a dusty environment and smokes 1ppd.  Now with 2 weeks history of worsening SOB, cough and difficulty speaking.",
+    "pmh": [
+      "Asthma"
+    ],
+    "meds": [
+      "Albuterol MDI prn",
+      "Advair 250/50"
+    ],
+    "allergies": [
+      "Sulfa"
+    ]
+  },
+  "vitals": [],
+  "assets": [],
+  "ordersCatalog": [],
+  "gates": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "case-sepsis",
+  "title": "Sepsis",
+  "summary": "This guy is sick!!!!!",
+  "history": {
+    "hpi": "68 YO M c 3 day h/o subjective fever abdominal pain waning mental status brought to the ED by his wife after finding him difficult to arouse and confused.",
+    "pmh": [
+      "HTN",
+      "GERD"
+    ],
+    "meds": [
+      "Prilosec 40",
+      "Valsartan 160"
+    ],
+    "allergies": [
+      "Sulfa"
+    ]
+  },
+  "vitals": [
+    {
+      "t": 1756589297401,
+      "hr": 120,
+      "bp": "86/40",
+      "rr": 30,
+      "spo2": null,
+      "temp": 38.2
+    }
+  ],
+  "assets": [],
+  "ordersCatalog": [],
+  "gates": []
+}

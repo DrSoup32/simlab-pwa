@@ -1,0 +1,22 @@
+{
+  "id": "case-anemia",
+  "title": "Symptomatic Anemia",
+  "summary": "",
+  "history": {
+    "hpi": "",
+    "pmh": [],
+    "meds": [],
+    "allergies": []
+  },
+  "vitals": [],
+  "assets": [
+    {
+      "id": "note-1757438581184-gk51nb",
+      "title": "History",
+      "type": "note",
+      "content": ""
+    }
+  ],
+  "ordersCatalog": [],
+  "gates": []
+}

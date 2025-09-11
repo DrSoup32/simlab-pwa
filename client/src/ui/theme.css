@@ -1,0 +1,34 @@
+:root{
+  --bg:#fafafa; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+  --line:#e5e7eb; --brand:#0aa; --danger:#c33; --warn:#b8860b; --ok:#2e7d32;
+  --surface:#00000008; --radius:12px; --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:system-ui, Segoe UI, Roboto, Arial}
+
+.toolbar{
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.toolbtn{
+  padding:6px 10px; border:1px solid var(--line); border-radius:10px; background:#fff; cursor:pointer;
+}
+.toolbtn[disabled]{opacity:.5; cursor:not-allowed}
+.viewer-frame{
+  border:3px solid #222; border-radius:var(--radius); padding:12px; background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.thumb{
+  min-width:160px; max-width:220px; text-align:left; padding:8px; border:1px solid var(--line); border-radius:8px; background:#fff;
+}
+.thumb.active{ border-color: var(--brand); background: color-mix(in srgb, var(--brand) 12%, #fff) }
+.left-rail{
+  border:1px solid var(--line); border-radius:10px; padding:10px; position:sticky; top:10px; height:calc(100vh - 60px); overflow:auto; background:#fff;
+}
+.tag-dot{display:inline-block; width:8px; height:8px; border-radius:50%}
+.tag-lab{background:#2962ff}
+.tag-img{background:#7c3aed}
+.tag-vid{background:#c62828}
+.tag-note{background:#455a64}
+.legend{font-size:12px; opacity:.75}

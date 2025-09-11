@@ -1,0 +1,30 @@
+{
+  "id": "A-Fib",
+  "title": "Heart Palpitations",
+  "summary": "70 YO c New onset A-Fib, presents with SOB, fatigue.  Chemical cardioversion fails.  Will need cardioversion.",
+  "history": {
+    "hpi": "70 YO male with 3 weeks worsening fatigue, dyspnea, B LE edema sent to the ED after seeing his primary care physician.",
+    "pmh": [
+      "HTN",
+      "T2DM"
+    ],
+    "meds": [
+      "Lantus",
+      "Metformin",
+      "Lisinopril",
+      "HCTZ"
+    ],
+    "allergies": []
+  },
+  "vitals": [],
+  "assets": [
+    {
+      "id": "lab-1757519807400-tx5li6",
+      "title": "Lab Panel",
+      "type": "lab",
+      "content": ""
+    }
+  ],
+  "ordersCatalog": [],
+  "gates": []
+}
