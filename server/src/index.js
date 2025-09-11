@@ -330,11 +330,18 @@ app.get('/api/health', (_req, res) => res.json({ ok: true }))
 const server = http.createServer(app)
 const io = new Server(server, { cors: { origin: '*' } })
 
+registerMonitorRoutes(app, io);
+startLaerdalWatcher(io);
+
 io.on("connection", (socket) => {
   // NEW: forward Control → Stage focus event (Jump)
   socket.on("control:stage:select", (payload) => {
     if (payload?.caseId) socket.to(payload.caseId).emit("control:stage:select", payload);
     else socket.broadcast.emit("control:stage:select", payload);
+  });
+  socket.on("control:stage:broadcast", (payload) => {
+    if (payload?.caseId) socket.to(payload.caseId).emit("stage:show", payload);
+    else socket.broadcast.emit("stage:show", payload);
   });
 });
 
