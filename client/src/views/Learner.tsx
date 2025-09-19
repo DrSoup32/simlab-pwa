@@ -406,7 +406,7 @@ export default function Learner() {
         {polls.length === 0 && <div style={{ opacity: 0.6 }}>No active polls.</div>}
         <div style={{ display: 'grid', gap: 10 }}>
           {polls.map((p) => (
-            <PollCard key={p.id} poll={p} onVote={(choices: number[]) => { socket.emit('learner:poll:vote', { pollId: p.id, caseId, choiceIndexes: choices, by: name, role, learnerId }); }} />
+            <PollCard key={p.id} poll={p} onVote={(choices: number[]) => { socket.emit('learner:poll:vote', { pollId: p.id, caseId, choiceId: choices, by: name, role, learnerId }); }} />
           ))}
         </div>
       </Section>
@@ -420,7 +420,7 @@ export default function Learner() {
             <textarea value={report.good} onChange={(e) => setReport((r) => ({ ...r, good: e.target.value }))} rows={3} style={{ width: '100%', padding: 8, border: '1px solid #ccc', borderRadius: 8 }} />
           </label>
           <label>
-            <div style={{ fontWeight: 600, marginBottom: 4 }}>What didn’t go well?</div>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>What did not go well?</div>
             <textarea value={report.bad} onChange={(e) => setReport((r) => ({ ...r, bad: e.target.value }))} rows={3} style={{ width: '100%', padding: 8, border: '1px solid #ccc', borderRadius: 8 }} />
           </label>
           <label>
