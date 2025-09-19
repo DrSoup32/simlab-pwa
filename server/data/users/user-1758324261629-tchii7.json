@@ -1,0 +1,17 @@
+{
+  "id": "user-1758324261629-tchii7",
+  "name": "derek",
+  "email": "derek@lambsonart.com",
+  "role": "faculty",
+  "createdAt": 1758324261629,
+  "lastActive": 1758324261629,
+  "preferences": {
+    "notifications": true,
+    "theme": "dark"
+  },
+  "stats": {
+    "sessionsCompleted": 0,
+    "casesCompleted": 0,
+    "totalTime": 0
+  }
+}

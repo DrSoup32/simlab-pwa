@@ -1,0 +1,17 @@
+{
+  "id": "user-1758322870826-6d48it",
+  "name": "Derek Campbell",
+  "email": "derek@lambsonart.com",
+  "role": "faculty",
+  "createdAt": 1758322870826,
+  "lastActive": 1758322870826,
+  "preferences": {
+    "notifications": true,
+    "theme": "light"
+  },
+  "stats": {
+    "sessionsCompleted": 0,
+    "casesCompleted": 0,
+    "totalTime": 0
+  }
+}

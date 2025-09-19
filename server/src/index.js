@@ -9,6 +9,8 @@ import multer from 'multer'
 import crypto from 'crypto'
 import { startLaerdalWatcher } from "./laerdalWatcher.js";
 import { registerMonitorRoutes } from "./MonitorRoutes.js";
+import { registerSessionRoutes } from "./sessionRoutes.js";
+import { registerSessionSocket } from "./sessionSocket.js";
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const app = express()
@@ -326,9 +328,15 @@ app.get('/api/session/:caseId/assess.csv', (req, res) => {
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }))
 
+// ---------- Session & User Routes ----------
+registerSessionRoutes(app)
+
 // ---------- Socket.IO ----------
 const server = http.createServer(app)
 const io = new Server(server, { cors: { origin: '*' } })
+
+// Register session socket handlers
+registerSessionSocket(io)
 
 io.on("connection", (socket) => {
   // NEW: forward Control → Stage focus event (Jump)

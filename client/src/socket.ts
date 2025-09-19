@@ -78,6 +78,16 @@ export interface ServerToClientEvents {
   "control:poll:update": (payload: any) => void;
   "control:poll:closed": (payload: any) => void;
 
+  // Session & Lobby events (NEW)
+  "lobby:state": (payload: any) => void;
+  "session:created": (payload: { session: any }) => void;
+  "session:updated": (payload: { session: any }) => void;
+  "session:user-joined": (payload: { sessionId: string; participant: any }) => void;
+  "session:user-left": (payload: { sessionId: string; userId: string }) => void;
+  "session:invitation": (payload: { invitation: any }) => void;
+  "session:started": (payload: { sessionId: string; startedAt: number }) => void;
+  "session:ended": (payload: { sessionId: string; endedAt: number }) => void;
+
   // Learner-targeted pushes
   "learner:welcome": (payload: any) => void;
   "learner:orders:catalog": (payload: any) => void;
@@ -123,6 +133,18 @@ export interface ClientToServerEvents {
   // Optional targetId (learner specific) supported by Control UI
   "control:message": (payload: { text: string; at: number; caseId?: string; targetId?: string }) => void;
   "stage:message": (payload: { text: string; at: number; caseId?: string }) => void;
+
+  // Session & Lobby events (NEW)
+  "lobby:join": (payload: { userId: string }) => void;
+  "lobby:leave": (payload: { userId: string }) => void;
+  "session:create": (payload: { sessionData: any }) => void;
+  "session:join": (payload: { sessionId: string; userId: string }) => void;
+  "session:leave": (payload: { sessionId: string; userId: string }) => void;
+  "session:invite": (payload: { sessionId: string; userIds: string[]; message?: string }) => void;
+  "session:start": (payload: { sessionId: string }) => void;
+  "session:pause": (payload: { sessionId: string }) => void;
+  "session:resume": (payload: { sessionId: string }) => void;
+  "session:end": (payload: { sessionId: string }) => void;
 
   // Learner actions
   "learner:hello": (payload: { caseId?: string; name?: string; id?: string }) => void;
